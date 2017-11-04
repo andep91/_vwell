@@ -26,351 +26,129 @@ body input:required:valid,
 body textarea:required:valid
 	color: #666
 
+body, p, ul, li, h1
+	margin: 0
+	padding: 0
+	list-style: none
+
 body
-	font-size: 16px
 	min-width: 320px
+	//overflow-x: hidden
+
+.banner
 	position: relative
-	line-height: 1.75
-	font-family: $default-font
-	overflow-x: hidden
-	&.ishome
-		.s_h
-			min-height: 700px
-			height: 100vh
-			background-color: #000
-			color: #fff
-			.t_l
-				padding-top: 40px
-				position: absolute
-				width: 100%
-				z-index: 1
-
-.button
-	display: inline-block
-	border: none
-	color: #fff
-	text-decoration:none
-	background-color: #fff
-	padding 15px 45px
-	font-size: 13px
-	text-transform: uppercase
-	font-weight: 600
-	letter-spacing: 3px
-	border-radius: 3px
-	text-align: center
-	position: relative
-	outline: none
-	transition: background-color .1s ease
-	&::after
-		transition: background-color .2s ease
-		position: absolute
-		content: ''
-		height: 4px
-		bottom: 0
-		width: 100%
-		background-color: #fff
-		opacity: 0.1%
-		border-bottom-left-radius: 2px
-		border-bottom-right-radius: 2px
-		left: 0
-	&:focus,&:hover
-		text-decoration: none
-		color: #fff
-	&:hover
-		background-color: #fff
-			&::after
-				opacity: .32
-	&:active
-		background-color: #fff
-			&::after
-				opacity: .32
-
-.h1,.h2,.h3,.h4,.h5,.h6
-	line-height: 1.4
-	text-transform: uppercase
-
-.logo
-	img
-		width: 125px
-		height: auto
-		margin-left: 45px
-
-.phone
-	position: absolute
-	right: 85px
-	top: 44px
-	font-family: sans-serif
-	font-size: 22px
-	white-space: nowrap
-	.fa
-		color: #fff
-		font-size: 22px
-		margin-right: 3px
-
-section, header
-	position: relative
-	background-size: cover
+	height: 100vh
 	background-position: center
-
-section
-	background-color: #fff
-
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-
-.hamburger
-	right: 0
-	position: absolute
-	top: 30px
-	.hamburger-box
-		width: 34px
-
-.hamgurger-inner //all 
-	border-radius: 0
-	width: 34px
-	height: 2px
-	background-color: #fff
-
-html.mm-opened
-	overflow-y: scroll
-.mm-panes > .mm-panel.mm-hasnavbar
-	right: -18px
-	&::before
-		content: '\f219'
-		font-family: font-awesome
-
-.h_fl
-	display: flex
-	height: 100%
-	position: relative
-	top: 0
-				
-.fl_cen
-	margin: auto
-
-.h_comp
-	text-align: center
-	position: relative
-	p
-		margin-top: 40px
-
-.welcome
-	p
-		font-size: 14px
-		text-transform: uppercase
-		display: flex
-		align-items: center
-		white-space: nowrap
-		margin: 0
-		margin-bottom: -10px
-		span
-			margin: 0 10px
-	.h1
-		font-size: 67px
-		margin: 0
-		line-height: 1.6
-
-
-
-
-
-
-
-
-
-
-
-
-.section_header
-	height: 133px
-	margin-left: -84px
-	margin-bottom: 20px
-	padding-left: 84px
-	padding-top: 50px
-	background-image: url("../img/logo_medium.png")
 	background-repeat: no-repeat
-	.h2
-		margin: 0
-		padding: 0
-		font-family: "RobotoCondensedBold"
-		font-size: 36px
-		color: #232529
-		text-transform: uppercase
-	.section_header_detail
-		margin-top: -6px
-		font-family: "Opensans"
-		font-size: 12px
-		color: #999
-.owl-theme 
-	.owl-dots, .owl-nav 
-		text-align: left
-	.owl-nav.disabled+.owl-dots
-		margin: 0 15px
-	.owl-dots 
-		.owl-dot span
-			margin: 30px 12px 0 0
-			width: 24px
-			height: 5px
-			background: #c5c6c6
-			border-radius: 0
-		.owl-dot.active span, .owl-dot:hover span
-			background: #ffc20c
-
-.logo
-	position: absolute
-	display: block
-	top: 24px
-	width: 170px
-	height: 46px
-	padding-left: 57px
-	padding-top: 4px
+	background-size: cover
 	font-size: 11px
-	color: #fff
-	text-transform: uppercase
-	background: url("../img/logo_small.png") left center no-repeat
-
-.main_header
-	position: relative
-	height: 955px
 	font-family: OpenSansBold
-	font-size: 11px
-	background-position: center
-	background-repeat: no-repeat
-	background-size: cover
-	p
-		margin: 0
-	a
+	a, a:hover, a:visited
 		color: #fff
 		text-transform: uppercase
-		&:link, &:active, &:visited
 		text-decoration: none
-		color: #fff
 	.wrap
 		height: 100%
 		background-color: rgba(0,0,0,.55)
-		.main_header_top
+		.header
+			z-index: 100
 			position: relative
-			top: 0
-			height: 94px
+			padding: 24px 0
 			border-bottom: 1px solid rgba(255,255,255,.11)
-			.main_header_phone
-				position: absolute
-				left: 307px
-				top: 34px
-				width: 118px
-				height: 24px
-				line-height: 24px
+			strong, .phone, .menu
+				display: inline-block
+				vertical-align: middle    				
+			.logo
+				strong
+					width: 110px
+					margin-left: 10px
+			.phone
+				margin-left: 126px
+				padding: 6px 10px
 				color: #232529
 				background: $accent
 				.fa
 					font-size: 12px
-					line-height: 24px
-					margin: 0px 8px
-			.main_header_menu
+					margin-right: 8px
+			.menu
 				position: absolute
-				right: -8px
-				top: 24px
+				top: 35.5px	
+				right: -6px
 				li
 					display: inline-block
-					list-style: none
 					a
 						display: block
-						height: 21px
-						line-height: 21px
 						margin-left: 14px
-						padding: 0 8px
+						padding: 4px 8px
 						&:hover
 							color: #232529
 							background-color: #ffc20c
-		.main_header_content
-			position: absolute
-			top: 285px
-			min-height: 326px
-			margin-left: -124px
-			margin-right: 124px
-			padding-top: 134px
-			padding-left: 124px
-			background-image: url("../img/logo_large.png")
-			background-repeat: no-repeat
+			.hamburger
+				display: none
+				position: absolute
+				right: 0
+				top: 19px
+				.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
+					background-color: #fff
+					border-radius: 0
+					width: 40px
+					height: 4px
+
+		.composition
+			display: -webkit-box
+			display: -webkit-flex
+			display: -ms-flexbox
+			display: flex
+			-webkit-box-orient: vertical
+			-webkit-box-direction: normal
+			-webkit-flex-direction: column
+			-ms-flex-direction: column
+			flex-direction: column
+			-webkit-box-pack: center
+			-webkit-justify-content: center
+			-ms-flex-pack: center
+			justify-content: center
+
 			color: #fff
+			margin-left: -124px
+			padding-left: 124px
+			margin-top: -96px
+			padding-top: 190px
+			min-height: 500px
+			height: 100vh
+			background-image: url("../img/logo_large.png")
+			background-position: left center
+			background-repeat: no-repeat
 			.h1
-				margin: 0
-				padding: 0
 				font-size: 46px
-				line-height: 1.2
+				line-height: 1
 				font-family: "RobotoCondensedBold"
 				text-transform: uppercase
-			.main_header_content_text
-				width: 664px
-				margin-top: 12px
-				line-height: 1.5
-				font-family: "OpensansSemiBold"
+			.text
 				font-size: 17px
-			.button
-				display: inline-block
-				margin-top: 42px
-				padding: 0 50px
-				font-family: "OpensansBold"
-				font-size: 11px
-				text-align: center
-				text-transform: uppercase
-			.order, .callback
-				height: 56px
-				line-height: 50px
-				margin-right: 32px
-				border: 3px solid #fff
-			a.order:hover, a.callback:hover
-				color: #232529
-				border-color: #ffc20c
-				background-color: #ffc20c
-		.main_header_down
-			position: absolute
-			left: 50%
-			bottom: 62px
-			width: 32px
-			height: 31px
-			margin-left: -16px
-			background-image: url("../img/down.png")
-
-.hamburger
-	display: none
-
-.section_about
-	font: 15px "Opensans"
-	height: 540px
-	padding-top: 30px
-	.about_text
-		margin-top: 4px
-		margin-bottom: 33px
-		font-family: "Opensans"
-		font-size: 15px
-		color: #666
-	.about_box
-		padding-left: 80px
-		margin-top: 17px
-		background-image: url("../img/icons_about.png")
-		background-repeat: no-repeat
-		color: #666
-		font-family: "Opensans"
-		.h3
-			margin: 0
-			padding: 0
-			font-family: "RobotoCondensedBold"
-			font-size: 15px
-			text-transform: uppercase
-	.about_best
-		background-position: 0px 9px
-	.about_experience
-		background-position: 0px -137px
-	img
-		margin-top: 10px
-		border: 5px solid #ffc20c	
-		display: block
-		max-width: 100%
-		height: auto
-	p
-		margin: 0
+				margin-top: 14px
+			.button-wrap
+				margin-top: 46px
+				.button
+					display: inline-block
+					margin-right: 24px
+					padding: 0 50px
+					font-family: "OpensansBold"
+					font-size: 11px
+					text-align: center
+					line-height: 50px
+					border: 3px solid #fff
+					&:hover
+						color: #232529
+						border-color: #ffc20c
+						background-color: #ffc20c
+.arrow
+	position: absolute
+	left: 50%
+	bottom: 56px
+	margin-left: -13px
+	.fa
+		font-size: 50px
+		color: #fff
 
 @import "media" // Всегда в конце
