@@ -38,11 +38,13 @@ body
 .banner
 	position: relative
 	height: 100vh
+	min-height: 800px
 	background-position: center
 	background-repeat: no-repeat
 	background-size: cover
 	font-size: 11px
 	font-family: OpenSansBold
+	color: #fff
 	a, a:hover, a:visited
 		color: #fff
 		text-transform: uppercase
@@ -55,7 +57,7 @@ body
 			position: relative
 			padding: 24px 0
 			border-bottom: 1px solid rgba(255,255,255,.11)
-			strong, .phone, .menu
+			strong, .phone
 				display: inline-block
 				vertical-align: middle    				
 			.logo
@@ -86,7 +88,7 @@ body
 			.hamburger
 				display: none
 				position: absolute
-				right: 0
+				right: -4px
 				top: 19px
 				.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
 					background-color: #fff
@@ -94,7 +96,7 @@ body
 					width: 40px
 					height: 4px
 
-		.composition
+		.flex_composition
 			display: -webkit-box
 			display: -webkit-flex
 			display: -ms-flexbox
@@ -109,12 +111,11 @@ body
 			-ms-flex-pack: center
 			justify-content: center
 
-			color: #fff
 			margin-left: -124px
 			padding-left: 124px
-			margin-top: -96px
 			padding-top: 190px
-			min-height: 500px
+			margin-top: -120px
+			min-height: 700px
 			height: 100vh
 			background-image: url("../img/logo_large.png")
 			background-position: left center
@@ -146,7 +147,7 @@ body
 	position: absolute
 	left: 50%
 	bottom: 56px
-	margin-left: -13px
+	margin-left: -16px
 	.fa
 		font-size: 50px
 		color: #fff
