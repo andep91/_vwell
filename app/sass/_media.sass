@@ -6,9 +6,7 @@
 /* Very Large Devices, Wide Screens */
 
 @media only screen and (max-width : 1399px)
-	.banner .wrap .flex_composition
-		margin-left: 0px
-		padding-left: 0px
+	/**/
 
 @media only screen and (max-width : 1280px)
 	/*.banner .wrap .flex_composition
@@ -30,9 +28,13 @@
 @media only screen and (max-width : 768px)
 	.banner .wrap .header .menu
 		display: none
+	.mm-menu.mm-offcanvas
+		width: 200px
+	html.mm-right.mm-opening .mm-menu.mm-opened~.mm-slideout
+		transform: translate3d(-200px,0,0)
 	.banner .wrap .header .hamburger
 		display: inline-block
-	.banner .wrap .flex_composition .button-wrap .button:last-child
+	.banner .wrap .flex_composition .wrap-button .button:last-child
 		margin-right: 20px
 		margin-top: 20px
 	/**/

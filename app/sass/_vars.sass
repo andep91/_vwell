@@ -2,3 +2,18 @@
 
 $default-font: "OpenSans", sans-serif
 $accent: #ffc20c
+
+@mixin wrap_logo($wrap_logo_width)
+	width: $wrap_logo_width
+	height: $wrap_logo_width
+	border: $wrap_logo_width*0.03 solid
+	margin-left: -$wrap_logo_width*.38
+	margin-bottom: -$wrap_logo_width*.57
+	&::before
+		content: ''
+		display: block
+		width: $wrap_logo_width*.03
+		height: $wrap_logo_width*.51
+		background-color: $accent
+		margin-top: -$wrap_logo_width*.03
+		margin-left: -$wrap_logo_width*.03
