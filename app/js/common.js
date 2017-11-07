@@ -22,5 +22,10 @@ $(function() {
       $('.hamburger').removeClass('is-active');    
     });
   };
+  
+  /*if (($(document).width() <= 1200) & ($(document).width() >= 993)){
+    var about_img_height = $('.about .composition').css('height');
+    $('.about_img').css('height',about_img_height);
+  }*/
 
 });
