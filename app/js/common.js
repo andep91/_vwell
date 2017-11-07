@@ -23,7 +23,7 @@ $(function() {
     });
   };
   
-  /*if (($(document).width() <= 1200) & ($(document).width() >= 993)){
+  /*if ($(document).width() >= 1200){
     var about_img_height = $('.about .composition').css('height');
     $('.about_img').css('height',about_img_height);
   }*/
