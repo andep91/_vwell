@@ -21,11 +21,16 @@ $(function() {
     api.bind('close:finish',function () {
       $('.hamburger').removeClass('is-active');    
     });
-  };
+  };  
   
-  /*if ($(document).width() >= 1200){
-    var about_img_height = $('.about .composition').css('height');
-    $('.about_img').css('height',about_img_height);
-  }*/
+  //if ($(document).width() >= 1200){
+  //  var about_img_height = $('.about .composition').css('height');
+  //  $('.about_img').css('height',about_img_height);
+
+  $('.service .text').hyphenate();
+
+  $('.news .text').dotdotdot();
+
+  $('.owl-carousel').owlCarousel();
 
 });
