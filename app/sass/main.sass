@@ -38,6 +38,22 @@ body
 .clear
 	clear: both
 
+.owl-carousel
+	.owl-theme 
+		.owl-dots, .owl-nav 
+			text-align: left
+		.owl-nav.disabled+.owl-dots
+			margin: 0 15px
+		.owl-dots 
+			.owl-dot span
+				margin: 30px 12px 0 0
+				width: 24px
+				height: 5px
+				background: #c5c6c6
+				border-radius: 0
+			.owl-dot.active span, .owl-dot:hover span
+				background: #ffc20c
+
 .banner
 	position: relative
 	height: 100vh
