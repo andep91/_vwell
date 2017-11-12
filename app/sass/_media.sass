@@ -13,7 +13,9 @@
 	//	margin-left: 0px
 	//	padding-left: 50px
 
-@media only screen and (max-width : 1200px)
+@media only screen and (max-width : 1200px)	
+	.footer .col-xs-8, .footer .col-xs-4
+		width: 50%
 	//banner .wrap .flex_composition
 	//	padding-left: 20px
 	/**/
@@ -27,8 +29,8 @@
 @media only screen and (max-width : 991px)
 	.main .about .about_img
 		margin-top: 40px
-		width: 100%
-		height: 100%
+		max-width: 900px
+		height: auto
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
@@ -48,8 +50,21 @@
 	/**/
 
 @media only screen and (max-width : 767px)
+	/**/
+
+@media only screen and (max-width : 619px)
+	.footer .col-xs-8, .footer .col-xs-4
+		width: 100%
+	.footer .composition .text
+		max-width: 600px
 	.footer .composition .map
-		width: auto
+		height: 300px
+	/**/
+
+@media only screen and (max-width : 559px)
+	.contacts .col-xs-6
+		width: 100%
+	/**/
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
