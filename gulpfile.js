@@ -19,6 +19,7 @@ gulp.task('scripts', function() {
 	return gulp.src([
 		'app/libs/jquery/jquery-3.2.1.min.js',
 		'app/libs/mmenu/jquery.mmenu.all.js',
+		'app/libs/plugins-scroll/plugins-scroll.js',
 		'app/libs/hypher/jquery.hyphen.ru.js',
 		'app/libs/owlcarousel2-2.2.1/owl.carousel.js',
 		'app/libs/dotdotdot/jquery.dotdotdot.js',
