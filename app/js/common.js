@@ -28,10 +28,10 @@ $(function() {
       $('.arrow').css('bottom','56px');
     });
 
-//    $('.mm-menu .services').click(function() {
-//      $('html, body').animate({ scrollTop: $('.main .about').height() }, 'slow');
-//      return false;
-//    });
+    $('.menu .services').click(function() {
+      $('html, body').animate({ scrollTop: $('.main .about').height() }, 'slow');
+      return false;
+    });
 
   };
 
