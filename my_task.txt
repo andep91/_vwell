@@ -1,4 +1,6 @@
-моргает
-SVG
-selectors
+transition
+yandex_map
+wrap_bg
+animate
 DOM
+svg

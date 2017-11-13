@@ -1,38 +1,11 @@
 $(function() {
 
   if ($(document).width() <= 768){
-    $('.menu').attr('id','mmenu');
-    $('.menu').removeAttr('class');
-
-    $('#mmenu').mmenu({
-      'extensions': ['theme-dark'],
-      'navbar' : {
-        'title' : ''
-      },
-      'offCanvas': {
-        'position': 'right'
-      }
+    $('.hamburger').click(function(){
+      $(this).toggleClass('is-active');
+      $(this).toggleClass('hamburger-mobile');
+      $('.menu').toggleClass('menu-mobile');
     });
-
-    var api = $('#mmenu').data('mmenu');
-    //моргает
-    api.bind('open:start',function () {
-      $('.arrow').css('bottom','-100px');
-    });
-    //моргает
-    api.bind('open:finish',function () {
-      $('.hamburger').addClass('is-active');
-    });
-    api.bind('close:finish',function () {
-      $('.hamburger').removeClass('is-active');
-      $('.arrow').css('bottom','56px');
-    });
-
-    $('.menu .services').click(function() {
-      $('html, body').animate({ scrollTop: $('.main .about').height() }, 'slow');
-      return false;
-    });
-
   };
 
 

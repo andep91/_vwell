@@ -5,7 +5,21 @@
 
 /* Very Large Devices, Wide Screens */
 
+@media only screen and (max-width : 1699px)
+	.banner .wrap .flex_composition .wrap_logo
+		border: none
+		&::before
+			display: none
+	/**/
+
 @media only screen and (max-width : 1399px)
+	.main .header .wrap_logo
+		display: none
+	.main
+		.about, .news, .reviews
+			padding-bottom: 30px
+		.contacts
+			padding: 30px
 	/**/
 
 @media only screen and (max-width : 1280px)

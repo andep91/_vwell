@@ -81,7 +81,7 @@ body
 					margin-right: 8px
 			.menu
 				position: absolute
-				top: 35.5px	
+				top: 35.5px
 				right: -6px
 				li
 					display: inline-block
@@ -95,13 +95,35 @@ body
 			.hamburger
 				display: none
 				position: absolute
-				right: -14px
+				right: -16px
 				top: 19px
 				.hamburger-inner, .hamburger-inner::after, .hamburger-inner::before
 					background-color: #fff
 					border-radius: 0
 					width: 40px
 					height: 4px
+			.menu-mobile
+				top: 0px
+				right: -16px
+				background: #323539
+				padding: 20px
+				display: block !important
+				li
+					display: block
+					a
+						display: block
+						margin-left: 0
+						margin-bottom: 14px
+						padding: 4px
+						&:hover
+							color: #232529
+							background-color: $accent
+					&:last-child a
+						margin-bottom: 0px
+
+			.hamburger-mobile
+				right: 84px !important
+
 
 		.flex_composition
 			display: flex
@@ -193,14 +215,15 @@ body
 			.box
 				padding-left: 80px
 				margin-top: 14px
-				background: url("../img/icons_about.png") 0px 9px no-repeat
 				font-size: 15px
 				.h3
 					font-family: RobotoCondensedBold
 					color: #202125
 					text-transform: uppercase
-				&:last-child
-					background-position: 0px -237px
+			.best
+				background: url("../img/icon_about_diamond.png") left center no-repeat
+			.experience
+				background: url("../img/icon_about_clock.png") left center no-repeat
 		img
 			object-fit: cover
 			width: 100%
@@ -341,11 +364,11 @@ body
 				padding: 4px 4px 4px 34px
 				font-size: 15px
 				color: #bababa
-				background: url("../img/icons_contacts.png") 0 4px no-repeat
 			.phone
 				margin-right: 26px
+				background: url("../img/icon_contacts_phone.png") left center no-repeat
 			.mail
-				background-position: 0 -116px
+				background: url("../img/icon_contacts_mail.png") left center no-repeat
 		.contacts_form
 			margin-top: 42px
 			position: relative
@@ -364,6 +387,7 @@ body
 				width: 100%
 				&:focus
 					outline: none
+					box-shadow: 0px 0px 2px #999;
 			.message
 				height: 158px
 				resize: none
@@ -371,7 +395,9 @@ body
 				padding: 18px 40px
 				margin-top: 18px
 				color: #232529
-				background-color: $accent
+				background-color: $accent				
+				&:hover
+					box-shadow: 0px 0px 2px $accent
 
 
 
