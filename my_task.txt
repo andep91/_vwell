@@ -1,1 +1,11 @@
+animate
+	banner_header_line center
+	menu left
+	news_img left_right, light
+	news read
+	icon_about svg_create
+	reviews fade_top
+	services fade_left_center_right
+	map fadepreloader
+header_first
 Методология

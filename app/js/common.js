@@ -69,4 +69,14 @@ $(function() {
 
   $('.reviews .text').hyphenate();
 
+
+
+
+  $('.services').waypoint(function(direction) {
+    $('.service').addClass('jello').addClass('animated').css('display','block');
+    }, {
+      offset: '50%'
+  });
+
+
 });
