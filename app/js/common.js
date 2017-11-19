@@ -1,5 +1,7 @@
 $(function() {
 
+
+
   if ($(document).width() <= 768){
     $('.hamburger').click(function(){
       $(this).toggleClass('is-active');
@@ -18,18 +20,19 @@ $(function() {
 
   
   if ($(document).width() >= 1200){
-    var about_img_height = $('.about .col-md-7').css('height');
+    about_img_height = $('.about .col-md-7').css('height');
     $('.about_img').css('height',about_img_height);
   }
 
 
 
-  $('.service .text').hyphenate();  
+  $('.services .text').hyphenate();  
 
 
 
   $('.news .owl-carousel').owlCarousel({
-    //loop: true,
+    loop:true,
+    autoplay: true,
     margin:30,
     responsiveClass:true,
     responsive:{
@@ -52,7 +55,6 @@ $(function() {
 
 
   $('.reviews .owl-carousel').owlCarousel({
-    //loop: true,
     margin:30,
     responsiveClass:true,
     responsive:{
@@ -71,12 +73,43 @@ $(function() {
 
 
 
-
-  $('.services').waypoint(function(direction) {
-    $('.service').addClass('jello').addClass('animated').css('display','block');
+  if ($(document).width() >= 768){
+    $('.services').waypoint(function(direction) {
+      $('.services .item:eq(0)').addClass('bounceInLeft').addClass('animated').css('display','block');
+      }, {
+        offset: '75%'
+      }
+    );
+    $('.services').waypoint(function(direction) {
+      $('.services .item:eq(2)').addClass('bounceInRight').addClass('animated').css('display','block');
+      }, {
+        offset: '75%'
+      }
+    );
+    $('.services').waypoint(function(direction) {
+      $('.services .item:eq(1)').addClass('bounceInUp').addClass('animated').css('display','block');
+      }, {
+        offset: '75%'
+      }
+    );
+  }else{
+    $('.services').waypoint(function(direction) {
+      $('.services .item').addClass('bounceIn').addClass('animated').css('display','block');
+      }, {
+        offset: '75%'
+      }
+    );
+  };
+  $('.footer').waypoint(function(direction) {
+    $('.map').addClass('zoomIn').addClass('animated').css('display','block');
     }, {
-      offset: '50%'
-  });
+      offset: '75%'
+    }
+  );
 
+
+
+
+  alert();
 
 });

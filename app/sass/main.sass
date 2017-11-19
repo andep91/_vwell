@@ -32,6 +32,9 @@ body, p, ul, li, h1, h2, h3, input, textarea
 	list-style: none
 	border: none
 
+h2
+	line-height: 1
+
 body
 	min-width: 320px
 	//overflow-x: hidden
@@ -92,14 +95,14 @@ body
 						&:hover
 							color: #232529
 							background-color: $accent
-							transition: all .5s ease
+							transition: all .2s ease
 			.menu-mobile
 				top: 0px
 				right: -16px
 				background: #323539
 				padding: 20px
 				display: block !important
-				transition: all .5s ease
+				transition: all .2s ease
 				li
 					display: block
 					a
@@ -161,7 +164,7 @@ body
 						color: #232529
 						border-color: $accent
 						background-color: $accent
-						transition: all .5s ease
+						transition: all .2s ease
 	.arrow
 		position: absolute
 		left: 50%
@@ -178,6 +181,14 @@ body
 
 
 .main
+	
+	.about, .news, .reviews
+		padding: 90px 0
+		.content
+			margin-top: 46px
+
+
+
 	.header	
 		.wrap_logo
 			@include wrap_logo(133px)
@@ -194,7 +205,7 @@ body
 
 
 	.owl-theme .owl-nav.disabled+.owl-dots
-		margin-top: 22px
+		margin-top: 20px
 		.owl-theme .owl-dots
 		text-align: left
 		.owl-dot span
@@ -209,12 +220,9 @@ body
 
 
 	.about
-		padding: 30px 0 90px
 		font-family: Opensans
 		color: #666
 		background-color: #fff
-		.composition
-			margin-top: 20px
 		.boxes
 			margin-top: 30px
 			.box
@@ -240,7 +248,7 @@ body
 		@include wrap_background(35,37,41,.95)
 		padding: 46px 0
 		min-height: 302px
-		.service
+		.item
 			display: none
 			padding: 92px 22px 28px
 			background: #323539 url("../img/icon_services.svg") 22px 24px no-repeat
@@ -257,14 +265,11 @@ body
 
 
 	.news
-		padding-top: 30px
-		padding-bottom: 88px
 		background-color: #f4f4f4
 		font-size: 12px
 		.content
-			margin-top: 36px
 			.owl-carousel
-				.new
+				.item
 					background-color: #FFF
 					img
 						object-fit: cover
@@ -288,12 +293,14 @@ body
 						color: #666
 						overflow: hidden
 
+
+
 	.all_news
 		font-family: OpensansBoldItalic
 		font-size: 17px
 		text-transform: uppercase
 		text-align: center
-		.composition
+		.content
 			height: 84px
 			line-height: 84px
 			background-color: $accent
@@ -307,16 +314,15 @@ body
 				&:hover
 					color: #fff
 					text-decoration: none
-					transition: all .5s ease
+					transition: all .2s ease
+
 
 
 	.reviews
 		background-color: #fff
-		padding: 30px 0 88px
 		.content
-			margin-top: 36px
 			.owl-carousel
-				.review
+				.item
 					img, .name
 						display: inline-block
 					img
@@ -336,8 +342,8 @@ body
 					.text
 						position: relative
 						background-color: #f4f4f4
-						margin-top: 52px
-						padding: 22px
+						margin-top: 40px
+						padding: 20px
 						font: 15px OpensansItalic
 						color: #666
 						&::before
@@ -352,12 +358,12 @@ body
 
 	.contacts
 		@include wrap_background(35,38,42,.95)
+		padding: 90px 0
 		font: 12px OpensansItalic
-		padding: 84px 0
 		.h2, .h3, .button
 			text-transform: uppercase
 			font-family: RobotoCondensedBold
-		.composition
+		.header
 			position: relative
 			.h2
 				font-size: 36px
@@ -366,6 +372,8 @@ body
 				margin: 0 0 46px
 				color: #999
 				font-family: Opensans
+		.content
+			position: relative
 			.phone, .mail
 				display: inline-block
 				padding: 4px 4px 4px 34px
@@ -377,37 +385,34 @@ body
 				background: url("../img/icon_contacts_phone.png") left center no-repeat
 			.mail
 				background: url("../img/icon_contacts_mail.png") left center no-repeat
-		.contacts_form
-			margin-top: 42px
-			position: relative
-			color: #fff
-			.h3
-				margin-bottom: 22px
-				font-size: 20px
-			label
-				display: block
-				margin-top: 12px
-			.input, .message
-				margin-top: 6px
-				background-color: #2e3034
-				color: #999
-				padding: 22px
-				width: 100%
-				&:focus
-					outline: none
-					box-shadow: 0px 0px 2px #999;
-					transition: all .5s ease
-			.message
-				height: 158px
-				resize: none
-			.button
-				padding: 18px 40px
-				margin-top: 18px
-				color: #232529
-				background-color: $accent				
-				&:hover
-					box-shadow: 0px 0px 2px $accent
-					transition: all .5s ease
+			.contacts_form
+				margin-top: 40px
+				position: relative
+				color: #fff
+				.h3
+					margin-bottom: 22px
+					font-size: 20px
+				label
+					display: block
+					margin-top: 12px
+				.input, .message
+					margin-top: 6px
+					background-color: #2e3034
+					color: #999
+					padding: 22px
+					width: 100%
+					&:focus
+						outline: none
+						box-shadow: 0px 0px 2px #999;
+						transition: all .2s ease
+				.message
+					height: 158px
+					resize: none
+				.button
+					padding: 18px 40px
+					margin-top: 18px
+					color: #232529
+					background-color: $accent
 
 
 
@@ -420,7 +425,7 @@ body
 		color: #fff
 		text-transform: uppercase
 		text-decoration: none
-	.composition
+	.content
 		strong
 			display: inline-block
 			vertical-align: middle
@@ -434,6 +439,7 @@ body
 			font: 15px Opensans
 			color: #bababa
 		.map
+			display: none
 			width: 100%
 			height: 214px
 	.line
