@@ -50,7 +50,6 @@ body
 .banner
 	position: relative
 	height: 100vh
-	min-height: 958px
 	background-position: center
 	background-repeat: no-repeat
 	background-size: cover
@@ -97,11 +96,11 @@ body
 							background-color: $accent
 							transition: all .2s ease
 			.menu-mobile
+				display: block !important
 				top: 0px
 				right: -16px
 				background: #323539
 				padding: 20px
-				display: block !important
 				transition: all .2s ease
 				li
 					display: block
@@ -128,6 +127,7 @@ body
 					height: 4px
 
 			.hamburger-mobile
+				display: none
 				right: 84px !important
 
 
@@ -271,6 +271,38 @@ body
 			.owl-carousel
 				.item
 					background-color: #FFF
+					a
+						text-decoration: none
+					.wrap_new
+						display: none
+					&:hover
+						.wrap_new
+							display: inline-block
+							vertical-align: middle
+							width: 100%
+							height: 100%
+							position: absolute
+							//padding-top: 43%
+							text-align: center
+							color: #fff
+							font-size: 40px
+							text-transform: uppercase
+							background-color: rgba(0,0,0,.8)
+
+
+					/*&:hover
+						&::before
+							content: 'читать'
+							z-index: 1
+							width: 100%
+							height: 100%
+							position: absolute
+							padding-top: 43%
+							text-align: center
+							color: #fff
+							font-size: 40px
+							text-transform: uppercase
+							background-color: rgba(0,0,0,.6)*/
 					img
 						object-fit: cover
 						width: 100%
